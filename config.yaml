@@ -1,6 +1,6 @@
 settings:
   title: 'Status Page'
-  url: 'https://status-page.eidam.dev' # used for Slack messages
+  url: 'https://status.addismap.workers.dev' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
 
@@ -14,23 +14,23 @@ settings:
   dayInHistogramNotOperational: 'Some checks failed'
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
+  - id: addismap-com # unique identifier
+    name: addismap.com
+    description: 'AddisMap.com' # default=empty
+    url: 'https://www.addismap.com/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: map-et
+    name: map.et
+    description: 'Map.et'
+    url: 'https://map.et'
     method: GET
-    expectStatus: 200
+    expectStatus: 302
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+  - id: pt-addismap-com
+    name: Public Transport API
+    url: 'https://pt.addismap.com/'
     method: GET
     expectStatus: 200
